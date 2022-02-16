@@ -1,4 +1,5 @@
 const display = document.getElementById("display");
+const filter = document.getElementById("filter");
 
 function openModal(e) {
     if(e.target.classList.contains("click")){
@@ -8,23 +9,14 @@ function openModal(e) {
 
 function closeModal(e) {
     if(!e.target.classList.contains("click")){
-        display.innerHTML = " "
+        display.style.visibility = "hidden";
+        filter.style.visibility = "hidden";
     }
 }
 
 function displayModal() {
-    display.innerHTML = `
-    <div class="modal">
-        <div class="modal-header">
-            <span class="modal-title">
-                Congratz!!! 
-            </span>
-            <span class="modal-sub-text"> You opened a modal</span>
-            <i class="fa-solid fa-champagne-glasses"></i>
-        </div> 
-        <button class="close-btn">Close</button>
-    </div>
-    `
+    display.style.visibility = "visible";
+    filter.style.visibility = "visible";
 }
 
 window.addEventListener("click", e => {
