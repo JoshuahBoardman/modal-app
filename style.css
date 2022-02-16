@@ -1,0 +1,45 @@
+*,
+:root {
+    --primary-color-200: hsl(247, 37%, 97%);
+    --primary-color-400: hsl(247, 37%, 57%);
+    --primary-color-600: hsl(247, 37%, 27%);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    background-color: var(--primary-color-600);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-color-200);
+    margin-bottom: 3rem;
+}
+
+.btn {
+    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: var(--primary-color-400);
+    color: var(--primary-color-200);
+    border: .2rem solid var(--primary-color-400);
+    border-radius: 5rem;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: .2rem solid var(--primary-color-200);
+}
