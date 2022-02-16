@@ -2,7 +2,10 @@
 :root {
     --primary-color-200: hsl(247, 37%, 97%);
     --primary-color-400: hsl(247, 37%, 57%);
+    --primary-color-500: hsl(247, 37%, 47%);
     --primary-color-600: hsl(247, 37%, 27%);
+    --secondary-color-400: hsl(55, 81%, 69%);
+    --shadow: hsl(247, 37%, 17%);
 }
 
 *::before,
@@ -14,32 +17,121 @@
 
 body {
     font-family: 'Hind', sans-serif;
+    /* TODO add gradient*/
     background-color: var(--primary-color-600);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    overflow: hidden;
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 7vmax;
     font-weight: 600;
     color: var(--primary-color-200);
-    margin-bottom: 3rem;
+    margin: 6rem 0 3rem;
 }
 
-.btn {
-    font-size: 1.8rem;
+.open-btn {
+    font-size: 2.5vmax;
     font-weight: 400;
     background-color: var(--primary-color-400);
     color: var(--primary-color-200);
     border: .2rem solid var(--primary-color-400);
-    border-radius: 5rem;
-    padding: 1.3rem 2rem;
+    border-radius: .25rem;
+    padding: 1.75vmax 2.5vmax;
     cursor: pointer;
 }
 
-.btn:hover {
+.open-btn:hover {
     border: .2rem solid var(--primary-color-200);
+}
+
+.display {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: absolute;
+    top: -6rem;
+    z-index: 1; /* Sit on top */
+    background-color: var(--primary-color-600);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .3rem solid var(--primary-color-500);
+    border-radius: .25rem;
+    padding: 2rem;
+    box-shadow: 0 7px 2px -2px var(--shadow);
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    color: var(--primary-color-200);
+    font-size: 6vmax;
+    font-weight: 600;
+}
+
+.modal-sub-text {
+    color: var(--primary-color-200);
+    font-size: 2.5vmax;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.fa-champagne-glasses{
+    font-size: 7vmax;
+    color: var(--secondary-color-400);
+    margin-bottom: 2rem;
+}
+
+.close-btn {
+    font-size: 2.5vmax;
+    font-weight: 400;
+    background-color: var(--primary-color-400);
+    color: var(--primary-color-200);
+    border: .2rem solid var(--primary-color-400);
+    border-radius: .25rem;
+    padding: 1.5vmax 2.5vmax;
+    margin: .75rem 0;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    border: .2rem solid var(--primary-color-200);
+}
+
+@media only screen and (min-width: 1200px) {
+    .title {
+        font-size: 6vmax;
+    }
+
+    .open-btn {
+        font-size: 1.5vmax;
+        padding: .75vmax 1.5vmax;
+    }
+
+    .modal-title {
+        font-size: 4vmax;
+    }
+
+    .modal-sub-text {
+        font-size: 1.5vmax;
+    }
+
+    .close-btn {
+        font-size: 1.5vmax;
+        padding: .75vmax 1.5vmax;
+    }
 }
