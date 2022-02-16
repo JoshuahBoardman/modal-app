@@ -28,7 +28,7 @@ body {
 }
 
 .title {
-    font-size: 7vmax;
+    font-size: 6vmax;
     font-weight: 600;
     color: var(--primary-color-200);
     margin: 3rem 0;
@@ -60,7 +60,7 @@ body {
 
 .modal {
     position: absolute;
-    top: -6rem;
+    top: -15rem;
     z-index: 1; /* Sit on top */
     background-color: var(--primary-color-600);
     display: flex;
@@ -125,7 +125,7 @@ body {
 
 @media only screen and (min-width: 1200px) {
     .title {
-        font-size: 6vmax;
+        font-size: 4vmax;
     }
 
     .open-btn {
